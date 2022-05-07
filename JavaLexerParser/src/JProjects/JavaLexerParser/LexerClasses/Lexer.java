@@ -1,4 +1,5 @@
 package JProjects.JavaLexerParser.LexerClasses;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.regex.*;
 public class Lexer {
@@ -14,7 +15,12 @@ public class Lexer {
         tokensTypeHashMap.put(x, Regex);
         return 0;
     }
-    public int LexString(String x) {
-        return 0;
+    public int RemoveTokenType(String x) {
+        if (!tokensTypeHashMap.containsKey(x)) {
+            return 2;
+        } else {
+            tokensTypeHashMap.remove(x);
+            return 1;
+        }
     }
 }
