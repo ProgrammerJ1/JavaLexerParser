@@ -5,7 +5,7 @@ import java.util.regex.*;
 public class Lexer {
     private HashSet<String> tokenList;
     private HashMap<String,Pattern> tokensTypeHashMap=new HashMap<String,Pattern>();
-    private LexToken[] TokenizedOutput;
+    private ArrayList<LexToken> TokenizedOutput;
     public int AddTokenType(String x,String y) {
         Pattern Regex;
         try {
@@ -25,5 +25,8 @@ public class Lexer {
             tokenList.remove(x);
             return 1;
         }
+    }
+    public int Lex(String string) {
+        return 0;
     }
 }
