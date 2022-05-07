@@ -15,4 +15,7 @@ public class Lexer {
         tokensTypeHashMap.put(x, Regex);
         return 0;
     }
+    public int LexString(String x) {
+        return 0;
+    }
 }
