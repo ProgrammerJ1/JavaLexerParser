@@ -1,7 +1,6 @@
 package JProjects.JavaLexerParser.LexerClasses;
 import java.util.HashMap;
-import java.util.regex.Pattern;
-import java.util.regex.PatternSyntaxException;
+import java.util.regex.*;
 public class Lexer {
     private HashMap<String,Pattern> tokensTypeHashMap=new HashMap<String,Pattern>();
     private LexToken[] TokenizedOutput;
