@@ -1,5 +1,4 @@
 package JProjects.JavaLexerParser.LexerClasses;
-import java.util.Arrays;
 import java.util.*;
 import java.util.regex.*;
 public class Lexer {
