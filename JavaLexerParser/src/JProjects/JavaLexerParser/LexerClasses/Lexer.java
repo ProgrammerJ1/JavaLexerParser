@@ -47,4 +47,7 @@ public class Lexer {
         }
         return 0;
     }
+    public ArrayList<LexToken> getTokenizedOutput() {
+        return TokenizedOutput;
+    }
 }
