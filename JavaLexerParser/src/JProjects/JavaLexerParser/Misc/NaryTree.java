@@ -1,7 +1,7 @@
 package JProjects.JavaLexerParser.Misc;
 import java.util.List;
 import java.util.LinkedList;
-class NaryTree {
+public class NaryTree {
     Object val;
     List<NaryTree> children = new LinkedList<>();
 
