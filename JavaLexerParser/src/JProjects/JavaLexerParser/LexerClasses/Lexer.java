@@ -19,19 +19,30 @@ public class Lexer {
             return 2;
         } else {
             tokensTypeHashMap.remove(x);
-            return 1;
+            return 0;
         }
     }
     public int Lex(String string) {
-        int CurrentStringLength=string.length();
+        TokenizedOutput.clear();
         String currentString=string;
         boolean LexingString=true;
         while (LexingString) {
-            bool AnyMatch=false;
+            boolean AnyMatch=false;
             LexAttempt: for (String i:tokensTypeHashMap.keySet()) {
                 if (tokensTypeHashMap.get(i).matcher(currentString).matches()) {
                     AnyMatch=true;
+                    String match=tokensTypeHashMap.get(i).matcher(currentString).group(1);
+                    String tokenType=i;
+                    TokenizedOutput.add(new LexToken(match,tokenType));
+                    currentString=currentString.substring(currentString.indexOf(match, 0));
+                    break LexAttempt;
                 }
+            }
+            if (!AnyMatch) {
+                TokenizedOutput.clear();
+                return 3;
+            } else {
+                LexingString=currentString.length()!=0;
             }
         }
         return 0;
