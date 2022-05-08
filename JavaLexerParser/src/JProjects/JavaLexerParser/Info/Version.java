@@ -1,3 +1,4 @@
+package JProjects.JavaLexerParser.Info
 class Version {
     int MajorVersionNumber=1;
     int MinorVersionNumber=0;

@@ -4,18 +4,14 @@ import java.util.regex.*;
 public class Lexer {
     private HashMap<String,Pattern> tokensTypeHashMap=new HashMap<String,Pattern>();
     private ArrayList<LexToken> TokenizedOutput;
-    public int AddTokenType(String x,String y,boolean Other) {
+    public int AddTokenType(String x,String y) {
         Pattern Regex;
         try {
            Regex=Pattern.compile(y); 
         } catch (PatternSyntaxException e) {
             return 1;
         }
-        if (Other) {
-            tokensTypeHashMap.put("Other", Regex);
-        } else {
-            tokensTypeHashMap.put(x,Regex)
-        }
+        tokensTypeHashMap.put(x,Regex);
         return 0;
     }
     public int RemoveTokenType(String x) {
@@ -27,7 +23,17 @@ public class Lexer {
         }
     }
     public int Lex(String string) {
-        string StringLength=0
+        int CurrentStringLength=string.length();
+        String currentString=string;
+        boolean LexingString=true;
+        while (LexingString) {
+            bool AnyMatch=false;
+            LexAttempt: for (String i:tokensTypeHashMap.keySet()) {
+                if (tokensTypeHashMap.get(i).matcher(currentString).matches()) {
+                    AnyMatch=true;
+                }
+            }
+        }
         return 0;
     }
 }
