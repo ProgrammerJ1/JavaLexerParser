@@ -1,6 +1,8 @@
 package JProjects.JavaLexerParser.ParserClasses;
-import JProjects.JavaLexerParser.Misc.NaryTree;
+
+import javax.swing.JTree;
+
 public class ParserGrammar {
     SentenceGrammar sentenceGrammar;
-    NaryTree treeTranslation;
+    JTree treeTranslation;
 }

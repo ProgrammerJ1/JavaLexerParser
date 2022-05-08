@@ -1,8 +1,8 @@
 package JProjects.JavaLexerParser.ParserClasses;
-import JProjects.JavaLexerParser.Misc.NaryTree;
+import javax.swing.JTree;
 public class AST {
-    NaryTree tree;
-    AST(NaryTree x) {
+    JTree tree;
+    AST(JTree x) {
         tree=x;
     }
 }
