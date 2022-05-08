@@ -1,5 +1,5 @@
 package JProjects.JavaLexerParser.Info;
-class Version {
+public class Version {
     int MajorVersionNumber=1;
     int MinorVersionNumber=0;
     int PatchLevelNumber=0;
