@@ -1,7 +1,6 @@
 package JProjects.JavaLexerParser.ParserClasses;
-import java.util.ArrayList;
-
-import JProjects.JavaLexerParser.LexerClasses.LexToken;
+import JProjects.JavaLexerParser.Misc.NaryTree;
 public class ParserGrammar {
-    ArrayList<SetenceGrammar> ParserGrammar;
+    SentenceGrammar sentenceGrammar;
+    NaryTree treeTranslation;
 }

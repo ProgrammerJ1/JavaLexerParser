@@ -2,8 +2,6 @@ package JProjects.JavaLexerParser.ParserClasses;
 
 import java.util.ArrayList;
 
-import JProjects.JavaLexerParser.LexerClasses.LexToken;
-
-public class SetenceGrammar {
+public class SentenceGrammar {
     ArrayList<String> SetenceGrammar;
 }

@@ -1,6 +1,5 @@
 package JProjects.JavaLexerParser.ParserClasses;
-import java.util.List;
-import java.util.LinkedList;
+import JProjects.JavaLexerParser.Misc.NaryTree;
 public class AST {
     NaryTree tree;
     AST(NaryTree x) {
