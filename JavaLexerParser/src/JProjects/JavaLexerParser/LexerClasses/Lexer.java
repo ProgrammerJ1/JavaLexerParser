@@ -2,7 +2,6 @@ package JProjects.JavaLexerParser.LexerClasses;
 import java.util.*;
 import java.util.regex.*;
 public class Lexer {
-    private HashSet<String> tokenList;
     private HashMap<String,Pattern> tokensTypeHashMap=new HashMap<String,Pattern>();
     private ArrayList<LexToken> TokenizedOutput;
     public int AddTokenType(String x,String y) {
@@ -13,7 +12,6 @@ public class Lexer {
             return 1;
         }
         tokensTypeHashMap.put(x, Regex);
-        tokenList.add(x);
         return 0;
     }
     public int RemoveTokenType(String x) {
@@ -21,7 +19,6 @@ public class Lexer {
             return 2;
         } else {
             tokensTypeHashMap.remove(x);
-            tokenList.remove(x);
             return 1;
         }
     }
